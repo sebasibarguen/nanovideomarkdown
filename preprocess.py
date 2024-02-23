@@ -3,7 +3,7 @@ import os
 import cv2
 from pydub import AudioSegment
 
-
+DATA_DIR = "data"
 VIDEO_FILE_PATH = "data/video.mp4"
 AUDIO_FILE_PATH = "data/audio.mp3"
 
@@ -61,6 +61,9 @@ def extract_frames(video_path, frames_dir):
 
     video.release()
 
+
+if not os.path.exists(DATA_DIR):
+    os.makedirs(DATA_DIR)
 
 extract_audio(VIDEO_FILE_PATH, AUDIO_FILE_PATH)
 

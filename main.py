@@ -122,6 +122,7 @@ for data in dataset:
 
 
     # Sample only every X frames
+    # 1400 is arbitrary, reduced number of frames so GPT4-V can handle it
     sample_frames = frames[::1400]
     base64_frames = [
         base64.b64encode(open(frame, "rb").read()).decode("utf-8") for frame in sample_frames
@@ -160,8 +161,6 @@ for data in dataset:
     result = client.chat.completions.create(**params)
 
     content = result.choices[0].message.content
-
-    print(content)
 
     # Save the content to a markdown file
     with open(f"output/{start}-{end}.md", "w") as f:

@@ -16,3 +16,10 @@ Following [Karpathys call to action](https://twitter.com/karpathy/status/1760807
 - Add one last call to make all posts more "integrated"
 - Improve how to sample frames
 - Increase output tokens for GPT4-V
+
+
+## Results
+
+Check out the results in the `/output` directory. The name of the file is the **start** and **end** frames, which should equal seconds in the video. 
+
+[0-600.md](output/0-600.md)
